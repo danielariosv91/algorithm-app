@@ -1,4 +1,5 @@
 import TimeLine from './components/TimeLine.jsx';
+import CardItem from './components/CardItem.jsx';
 
 import './TwoSum.scss'
 
@@ -46,81 +47,12 @@ export const TwoSum = () => {
             <div className="flex justify-center gap-2">
                 <TimeLine values={nums} />
 
+
                 <div className="flex-1 summay">
                     <div className="flex flex-wrap justify-content-around">
-                        <div className="card bg-base-100 text-primary-content w-100 mr-1 my-2">
-                            <div className="card-body">
+                        <CardItem />
 
-                                <p>Se toma el primer valor del ciclo [i] = {1}  </p>
-                                <p>Se resta (nums[i] - target)</p>
-
-                                <div className="mockup-code w-full">
-                                    <pre><code> nums[i] = 2</code></pre>
-                                </div>
-
-
-                                <div className="mockup-code w-full">
-                                    <pre><code>  9 - 2 = 7</code></pre>
-                                </div>
-
-                                <h5 className='my-5'>¿Existe {2} en el hashmap? </h5>
-                                <h5 className='my-2'>No exite </h5>
-
-
-                            </div>
-                        </div>
-                        <div className="card bg-base-100 text-primary-content w-100 mr-1">
-                            <div className="card-body">
-
-                                <p>Se toma segundo valor del ciclo </p>
-
-                                <div className="mockup-code w-full">
-                                    <pre><code> nums[i] = -6</code></pre>
-                                </div>
-
-                                <p>Se resta (nums[i] - target) </p>
-
-                                <div className="mockup-code w-full">
-                                    <pre><code>  9 - 6 = 3</code></pre>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div className="card bg-base-100 text-primary-content w-100 mr-1">
-                            <div className="card-body">
-
-                                <p>Se toma segundo valor del ciclo </p>
-
-                                <div className="mockup-code w-full">
-                                    <pre><code> nums[i] = -6</code></pre>
-                                </div>
-
-                                <p>Se resta (nums[i] - target) </p>
-
-                                <div className="mockup-code w-full">
-                                    <pre><code>  9 - 6 = 3</code></pre>
-                                </div>
-
-
-                            </div>
-                        </div>
-                        <div className="card bg-base-100 text-primary-content w-100 mr-1">
-                            <div className="card-body">
-
-                                <p>Se toma segundo valor del ciclo </p>
-
-                                <div className="mockup-code w-full">
-                                    <pre><code> nums[i] = -6</code></pre>
-                                </div>
-
-                                <p>Se resta (nums[i] - target) </p>
-
-                                <div className="mockup-code w-full">
-                                    <pre><code>  9 - 6 = 3</code></pre>
-                                </div>
-
-                            </div>
-                        </div>
+              
                     </div>
                 </div>
 

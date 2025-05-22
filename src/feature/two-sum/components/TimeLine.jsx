@@ -1,9 +1,4 @@
-
-
 export default function TimeLine({ values }) {
-    console.log(values)
-
-
     return (
         <div className="flex-none timeline">
             <ul className="timeline timeline-vertical">
