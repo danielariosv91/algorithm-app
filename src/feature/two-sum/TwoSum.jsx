@@ -1,19 +1,24 @@
+import TimeLine from './components/TimeLine.jsx';
+
 import './TwoSum.scss'
 
 export const TwoSum = () => {
+    const nums = [2, -6, 11, 7];
+    const target = 9;
+
     return (
-        <div className="content">
+        <div className="content px-8">
             <h1>Algortimo Dos Sumas (Two Sum)</h1>
 
             <p className='my-8'>Dado un array de enteros nums y un entero objetivo, devuelve los índices de los dos números de forma que sumen el objetivo.
                 Puedes asumir que cada entrada tendrá exactamente una solución y no puedes usar el mismo elemento dos veces.
                 Puedes devolver la respuesta en cualquier orden.</p>
 
-            <div className="flex my-8">
+            {/* <div className="flex justify-center my-8">
                 <input type="text" placeholder="Ingresar Rango de valores" className="input" />
                 <input type="text" placeholder="Ingresar Target" className="input" />
                 <button className="btn btn-soft btn-accent">Generar</button>
-            </div>
+            </div> */}
 
 
             <div className="flex justify-center gap-2 avatar avatar-placeholder">
@@ -38,126 +43,90 @@ export const TwoSum = () => {
             </div>
 
 
-            <div className="flex">
-                <div className="w-14 timeline">
-                    <ul className="timeline timeline-vertical">
-                        <li>
-                            <div className="timeline-start timeline-box">2</div>
-                            <div className="timeline-middle">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 20 20"
-                                    fill="currentColor"
-                                    className="text-primary h-5 w-5"
-                                >
-                                    <path
-                                        fillRule="evenodd"
-                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                                        clipRule="evenodd"
-                                    />
-                                </svg>
+            <div className="flex justify-center gap-2">
+                <TimeLine values={nums} />
+
+                <div className="flex-1 summay">
+                    <div className="flex flex-wrap justify-content-around">
+                        <div className="card bg-base-100 text-primary-content w-100 mr-1 my-2">
+                            <div className="card-body">
+
+                                <p>Se toma el primer valor del ciclo [i] = {1}  </p>
+                                <p>Se resta (nums[i] - target)</p>
+
+                                <div className="mockup-code w-full">
+                                    <pre><code> nums[i] = 2</code></pre>
+                                </div>
+
+
+                                <div className="mockup-code w-full">
+                                    <pre><code>  9 - 2 = 7</code></pre>
+                                </div>
+
+                                <h5 className='my-5'>¿Existe {2} en el hashmap? </h5>
+                                <h5 className='my-2'>No exite </h5>
+
+
                             </div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-start timeline-box">-6</div>
-                            <div className="timeline-middle">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 20 20"
-                                    fill="currentColor"
-                                    className=" h-5 w-5"
-                                >
-                                    <path
-                                        fillRule="evenodd"
-                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                                        clipRule="evenodd"
-                                    />
-                                </svg>
-                            </div>
-                            <hr />
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-start timeline-box">11</div>
-                            <div className="timeline-middle">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 20 20"
-                                    fill="currentColor"
-                                    className="h-5 w-5"
-                                >
-                                    <path
-                                        fillRule="evenodd"
-                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                                        clipRule="evenodd"
-                                    />
-                                </svg>
-                            </div>
-                        </li>
-                        <li>
-                            <hr />
-                            <div className="timeline-start timeline-box">7</div>
-                            <div className="timeline-middle">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 20 20"
-                                    fill="currentColor"
-                                    className="h-5 w-5"
-                                >
-                                    <path
-                                        fillRule="evenodd"
-                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                                        clipRule="evenodd"
-                                    />
-                                </svg>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div className="flex summay">
-                    <div className="card bg-base-100 text-primary-content w-96 mr-1">
-                        <div className="card-body">
-
-                            <p>Se toma segundo valor del ciclo </p>
-
-                            <div className="mockup-code w-full">
-                                <pre><code> nums[i] = -6</code></pre>
-                            </div>
-
-                            <p>Se resta (nums[i] - target) </p>
-
-                            <div className="mockup-code w-full">
-                                <pre><code>  9 - 6 = 3</code></pre>
-                            </div>
-
-
                         </div>
-                    </div>
-                    <div className="card bg-base-100 text-primary-content w-96 mr-1">
-                        <div className="card-body">
+                        <div className="card bg-base-100 text-primary-content w-100 mr-1">
+                            <div className="card-body">
 
-                            <p>Se toma segundo valor del ciclo </p>
+                                <p>Se toma segundo valor del ciclo </p>
 
-                            <div className="mockup-code w-full">
-                                <pre><code> nums[i] = -6</code></pre>
+                                <div className="mockup-code w-full">
+                                    <pre><code> nums[i] = -6</code></pre>
+                                </div>
+
+                                <p>Se resta (nums[i] - target) </p>
+
+                                <div className="mockup-code w-full">
+                                    <pre><code>  9 - 6 = 3</code></pre>
+                                </div>
+
                             </div>
+                        </div>
+                        <div className="card bg-base-100 text-primary-content w-100 mr-1">
+                            <div className="card-body">
 
-                            <p>Se resta (nums[i] - target) </p>
+                                <p>Se toma segundo valor del ciclo </p>
 
-                            <div className="mockup-code w-full">
-                                <pre><code>  9 - 6 = 3</code></pre>
+                                <div className="mockup-code w-full">
+                                    <pre><code> nums[i] = -6</code></pre>
+                                </div>
+
+                                <p>Se resta (nums[i] - target) </p>
+
+                                <div className="mockup-code w-full">
+                                    <pre><code>  9 - 6 = 3</code></pre>
+                                </div>
+
+
                             </div>
+                        </div>
+                        <div className="card bg-base-100 text-primary-content w-100 mr-1">
+                            <div className="card-body">
 
+                                <p>Se toma segundo valor del ciclo </p>
+
+                                <div className="mockup-code w-full">
+                                    <pre><code> nums[i] = -6</code></pre>
+                                </div>
+
+                                <p>Se resta (nums[i] - target) </p>
+
+                                <div className="mockup-code w-full">
+                                    <pre><code>  9 - 6 = 3</code></pre>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div>
 
 
 
-                <div className="card bg-base-100 text-primary-content w-96 mr-1">
+                <div className="flex-none card bg-base-100 text-primary-content mr-1">
                     <div className="card-body">
                         <p>Map</p>
 
