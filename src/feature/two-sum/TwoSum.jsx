@@ -2,6 +2,7 @@ import TimeLine from './components/TimeLine.jsx';
 import CardItem from './components/CardItem.jsx';
 
 import './TwoSum.scss'
+import Hashmap from './components/Hashmap.jsx';
 
 export const TwoSum = () => {
     const nums = [2, -6, 11, 7];
@@ -52,30 +53,14 @@ export const TwoSum = () => {
                     <div className="flex flex-wrap justify-content-around">
                         <CardItem />
 
-              
+
                     </div>
                 </div>
 
 
 
                 <div className="flex-none card bg-base-100 text-primary-content mr-1">
-                    <div className="card-body">
-                        <p>Map</p>
-
-                        <div className="mockup-code w-full">
-                            <pre><code>map = {'{'}2: 0{'}'}</code></pre>
-
-                        </div>
-                        <div className="mockup-code w-full">
-                            <pre><code>map = {'{'}2: 0{'}, {'}3: 0{'}'}</code></pre>
-
-                        </div>
-                        <div className="mockup-code w-full">
-                            <pre><code>map = {'{'}2: 0{'}, {'}3: 1{'}, {'}11: 2{'}'}</code></pre>
-
-                        </div>
-
-                    </div>
+                    <Hashmap />
                 </div>
 
             </div>
