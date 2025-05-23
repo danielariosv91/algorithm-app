@@ -22,42 +22,37 @@ export const TwoSum = () => {
                     Puedes asumir que cada entrada tendrá exactamente una solución y no puedes usar el mismo elemento dos veces.
                     Puedes devolver la respuesta en cualquier orden.</p>
 
+                <div className="flex justify-center gap-2 avatar avatar-placeholder">
+                    {nums?.map((number) =>
+                        <div className="bg-neutral text-neutral-content w-12 rounded-full">
+                            <span>{number}</span>
+                        </div>
+                    )}
+                </div>
+
                 <div className="flex justify-center my-8">
-                    {/* <input type="text" placeholder="Ingresar Rango de valores" className="input" />
-                    <input type="text" placeholder="Ingresar Target" className="input" /> */}
-
-                    <button className="btn btn-soft btn-accent">Avanzar</button>
+                    <button className="btn btn-soft btn-accent">Comenzar</button>
                 </div>
             </div>
 
-            <div className="flex justify-center gap-2 avatar avatar-placeholder">
-                {nums?.map((number) =>
-                    <div className="bg-neutral text-neutral-content w-12 rounded-full">
-                        <span>{number}</span>
+
+            {initialize && (
+                <div className="flex justify-center gap-2">
+                    <TimeLine numbers={nums} />
+
+
+                    <div className="flex-1 summay">
+                        <div className="flex flex-wrap justify-content-around">
+                            <CardItem nums={nums} index={index} target={target} />
+                        </div>
                     </div>
-                )}
-            </div>
-
-            <div className='flex justify-center gap-2 my-8'>
-                <button className="btn btn-soft btn-accent">Comenzar</button>
-                <button className="btn btn-soft btn-accent" >Avanzar</button>
-            </div>
-
-            <div className="flex justify-center gap-2">
-                <TimeLine numbers={nums} />
 
 
-                <div className="flex-1 summay">
-                    <div className="flex flex-wrap justify-content-around">
-                        <CardItem nums={nums} index={index} target={target} />
+                    <div className="flex-none card bg-base-100 text-primary-content mr-1">
+                        <Hashmap />
                     </div>
                 </div>
-
-
-                <div className="flex-none card bg-base-100 text-primary-content mr-1">
-                    <Hashmap />
-                </div>
-            </div>
+            )}
         </div >
     )
 }
