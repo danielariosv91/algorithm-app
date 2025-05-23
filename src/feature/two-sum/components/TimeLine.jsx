@@ -1,8 +1,8 @@
-export default function TimeLine({ values }) {
+export default function TimeLine({ numbers }) {
     return (
         <div className="flex-none timeline">
             <ul className="timeline timeline-vertical">
-                {values?.map((number) =>
+                {numbers?.map((number) =>
                     <li>
                         <div className="timeline-start timeline-box">{number}</div>
                         <div className="timeline-middle">
